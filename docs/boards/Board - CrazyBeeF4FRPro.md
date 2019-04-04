@@ -3,7 +3,7 @@
 ![CrazyBee F4 FR Pro back](images/CrazyBeeF4FRProBot.jpg)
 
 ## Description
-CrazyBee F4 FR Pro flight controller is a Highly integrated board(Receiver/4in1 ESC/OSD/Current Sensor) for 1~2S Whoop brushless types of racing drones. An example is the popular Trashcan
+The CrazyBee F4 FR Pro flight controller is a Highly integrated board(Receiver/4in1 ESC/OSD/Current Sensor) for 1~2S Whoop brushless types of racing drones. An good example is the popular Trashcan
 
 ## MCU, Sensors and Features
 
@@ -22,6 +22,28 @@ CrazyBee F4 FR Pro flight controller is a Highly integrated board(Receiver/4in1 
   - Beeper output: 2-pin, soldering pad
   - 4 Rx Indicating LEDs: 2 x red  and  2 x white
   - Board size: 28.5 * 28.5mm
+
+## Manufacturers and Distributors
+
+- Manufacturers: http://www.happymodel.cn/
+
+## Designers
+
+## Maintainers
+
+## FAQ & Known Issues
+
+FRSKY Version:
+- If flying Betaflight with FrSky onboard chip (CC2500 SPI) and in case one needs to adhere to new **EU LBT** use Betaflight **v4.0**.x or higher to bind to your Taranis.
+The factory default BF receiver mode is FRSKY_X, so remember to configure to FRSKY_X_LBT this if needed. For this you need **Betaflight Configurator v1.5** or higher. **Older versions do not have the FRSKY_X_LBT option!**
+- FrSky X , FrSky X LBT(8 / 16 channels) and FrSky D (8 channels) work all reliably, including in combination with crash flip / Dshot beacon, as long as the TELEMETRY feature is disabled;
+Basic telemetry information like RSSI and battery voltage will be sent even when the TELEMETRY feature is disabled;
+- On FrSky D, the TELEMETRY feature causes occasional dropouts, depending on how many sensors (BARO, GPS, ...) are enabled, probably due to a timing overrun;
+- On FrSky X (& FrSky X LBT), the TELEMETRY feature causes hard lockups due to a bug in the telemetry generation code. Fixing appriciated.
+
+## Other Resources
+
+- User Manual: http://www.happymodel.cn/wp-content/uploads/2019/01/CrazyBee-F4FR-Pro-Frsky-version-Manual-.pdf
 
 ## Resource mapping
 
@@ -54,26 +76,3 @@ CrazyBee F4 FR Pro flight controller is a Highly integrated board(Receiver/4in1 
 | UART1 RX                   | PA10 |       |     |             |            					   |
 | UART2 TX                   | PA2  |       |     |             |      						       |
 | UART2 RX                   | PA3  |       |     |             |            					   |
-
-## Manufacturers and Distributors
-
-- Manufacturers: http://www.happymodel.cn/
-
-## Designers
-
-## Maintainers
-
-## FAQ & Known Issues
-
-FRSKY Version:
-- If flying Betaflight with FrSky onboard chip (CC2500 SPI) and in case one needs to adhere to new **EU LBT** use Betaflight **v4.0**.x or higher to bind to your Taranis.
-The factory default BF receiver mode is FRSKY_X, so remember to configure to FRSKY_X_LBT this if needed. For this you need **Betaflight Configurator v1.5** or higher. **Older versions do not have the FRSKY_X_LBT option!**
-- FrSky X , FrSky X LBT(8 / 16 channels) and FrSky D (8 channels) work all reliably, including in combination with crash flip / Dshot beacon, as long as the TELEMETRY feature is disabled;
-Basic telemetry information like RSSI and battery voltage will be sent even when the TELEMETRY feature is disabled;
-- On FrSky D, the TELEMETRY feature causes occasional dropouts, depending on how many sensors (BARO, GPS, ...) are enabled, probably due to a timing overrun;
-- On FrSky X (& FrSky X LBT), the TELEMETRY feature causes hard lockups due to a bug in the telemetry generation code. Fixing appriciated.
-
-## Other Resources
-
-- User Manual: http://www.happymodel.cn/wp-content/uploads/2019/01/CrazyBee-F4FR-Pro-Frsky-version-Manual-.pdf
-
