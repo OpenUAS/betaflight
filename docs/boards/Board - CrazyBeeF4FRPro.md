@@ -1,9 +1,9 @@
-# CrazyBee F4 FR Pro
+# CrazyBee F4 FR Pro v1.0
 ![CrazyBee F4 FR Pro front](images/CrazyBeeF4FRProTop.jpg)
 ![CrazyBee F4 FR Pro back](images/CrazyBeeF4FRProBot.jpg)
 
 ## Description
-CrazyBee F4 FR Pro flight controller is a Highly integrated board(Receiver/4in1 ESC/OSD/Current Sensor) for 1~2S Whoop brushless racing drone.
+CrazyBee F4 FR Pro flight controller is a Highly integrated board(Receiver/4in1 ESC/OSD/Current Sensor) for 1~2S Whoop brushless types of racing drones. An example is the popular Trashcan
 
 ## MCU, Sensors and Features
 
@@ -55,11 +55,9 @@ CrazyBee F4 FR Pro flight controller is a Highly integrated board(Receiver/4in1 
 | UART2 TX                   | PA2  |       |     |             |      						       |
 | UART2 RX                   | PA3  |       |     |             |            					   |
 
-
 ## Manufacturers and Distributors
 
 - Manufacturers: http://www.happymodel.cn/
-- Distributors: Will add soon...
 
 ## Designers
 
@@ -67,15 +65,13 @@ CrazyBee F4 FR Pro flight controller is a Highly integrated board(Receiver/4in1 
 
 ## FAQ & Known Issues
 
-
-
 FRSKY Version:
-- To bind to your Taranis, you need to be running the non-eu OpenTX version, which allows you to use the required D8 setting to bind to the RX. The factory default BF receiver mode is FRSKY_X, so remember to configure this if needed.
-- FrSky X (8 / 16 channels) and FrSky D (8 channels) work both reliably, including in combination with crash flip / Dshot beacon, as long as the TELEMETRY feature is disabled;
+- If flying Betaflight with FrSky onboard chip (CC2500 SPI) and in case one needs to adhere to new **EU LBT** use Betaflight **v4.0**.x or higher to bind to your Taranis.
+The factory default BF receiver mode is FRSKY_X, so remember to configure to FRSKY_X_LBT this if needed. For this you need **Betaflight Configurator v1.5** or higher. **Older versions do not have the FRSKY_X_LBT option!**
+- FrSky X , FrSky X LBT(8 / 16 channels) and FrSky D (8 channels) work all reliably, including in combination with crash flip / Dshot beacon, as long as the TELEMETRY feature is disabled;
 Basic telemetry information like RSSI and battery voltage will be sent even when the TELEMETRY feature is disabled;
 - On FrSky D, the TELEMETRY feature causes occasional dropouts, depending on how many sensors (BARO, GPS, ...) are enabled, probably due to a timing overrun;
-- On FrSky X, the TELEMETRY feature causes hard lockups due to a bug in the telemetry generation code.
-
+- On FrSky X (& FrSky X LBT), the TELEMETRY feature causes hard lockups due to a bug in the telemetry generation code. Fixing appriciated.
 
 ## Other Resources
 
